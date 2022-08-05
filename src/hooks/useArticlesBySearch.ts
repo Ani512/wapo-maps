@@ -50,7 +50,7 @@ export default function useArticlesBySearch(search: string): Article[] {
     async function articlesBySearch(search: string): Promise<void> {
       let documents: any[] = [];
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_SEARCH}?query=${search}`
+        `${process.env.NEXT_PUBLIC_SEARCH}?query=${search}
       );
       const data = await response.json();
       documents = data.results.documents;
